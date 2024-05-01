@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+:root{
+    --amarelo:#FFC727;
+    --amarelo_claro:#ffc527af;
+    --preto:#161718;
+    --noite:#263238;
+    --branco:#ECEFF1;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--preto);
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+#password-img{
+    width: 6.25rem;
+    
+}
+#title{
+    color: var(--branco);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+#password_container{
+    width: 100%;
+  max-width: 25rem;
+  display: none;
+  align-items: center;
+justify-content: space-between;
+background-color: var(--noite);
+color: var(--branco);
+border-radius: 0.5rem;
+padding: 0.5rem;
+}
+#password_container.show{
+    display: flex;
+}
+#password{
+    color: var(--branco);
+    font-size: 0.9rem;
+    width: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#copy{
+    background-color: transparent;
+    border: none;
+    color: var(--amarelo);
+    height: 2.5rem;
+    width: 1.9rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: color 0.4s;
+}
+#copy:hover{
+    color: var(--amarelo_claro);
+}
+#password_items{
+    width: 25rem;
+    background-color: var(--noite);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    font-size: 1rem;
+}
+.item{
+    color: var(--branco);
+    display: flex;
+    gap: 0.9rem;
+}
+#size{
+    width: 3.1rem;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+}
+#size::-webkit-inner-spin-button, #size::-webkit-outer-spin-button{
+opacity: 1;
+}
+#size:focus{
+    outline: 1px solid --amarelo;
+}
+#generate{
+    background-color: var(--amarelo);
+    border: none;
+    margin-top: 0.8rem;
+    padding: 0.6rem 0px;
+    border: 4px;
+    color: var(--preto);
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.4s;
+}
+#generate:hover{
+    background-color: var(--amarelo_claro);
+}
+@media screen and (max-width:500px){
+    #password-img{
+        width: 4rem;
+    }
+    #password_items{
+        width: 20rem;
+    }
+    #title{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width:350px){
+    #password-img{
+        width: 3rem;
+    }
+    #password_items{
+        width: 17rem;
+    }
+    #size{
+        width: 2.5rem;
+    }
+}
+@media screen and (max-width:290px){
+    #password-img{
+        width: 2rem;
+    }
+    #password_items{
+        width: 14rem;
+    }
+    #size{
+        width: 1.5rem;
+    }
+   
+}
